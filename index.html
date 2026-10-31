@@ -11,7 +11,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,att
 const all=[];const layers={};
 R.forEach(r=>{const l=L.polyline(r.pts,{color:r.color,weight:5,opacity:.85}).bindPopup(r.name).addTo(map);layers[r.name]=l;all.push(...r.pts);});
 L.marker(R[0].pts[0]).bindPopup('Start / aankomst: sporthal Brecht').addTo(map);
-L.circleMarker([51.3282687,4.6039340],{radius:11,color:'#000',weight:2,fillColor:'#ffd700',fillOpacity:1}).bindTooltip('🍌 Bevoorrading',{permanent:true,direction:'right'}).bindPopup('<b>Bevoorrading</b><br>Parking De Groene Linden, Schotensteenweg<br>58 km: na ±30 km<br>76 km: na ±39 km<br>85 km: na ±46 km').addTo(map);
+L.circleMarker([51.3277356,4.6054937],{radius:11,color:'#000',weight:2,fillColor:'#ffd700',fillOpacity:1}).bindTooltip('🍌 Bevoorrading',{permanent:true,direction:'right'}).bindPopup('<b>Bevoorrading</b><br>Parking De Groene Linden, Schotensteenweg<br>58 km: na ±30 km<br>76 km: na ±39 km<br>85 km: na ±46 km').addTo(map);
 map.fitBounds(all,{padding:[20,20]});
 L.control.layers(null,layers,{collapsed:false}).addTo(map);
 const lg=L.control({position:'bottomleft'});lg.onAdd=()=>{const d=L.DomUtil.create('div','lg');d.innerHTML='<b>Sunshine Trappers – Gravel 2026</b>'+R.map(r=>`<div><span class="sw" style="background:${r.color}"></span>${r.name}</div>`).join('');return d};lg.addTo(map);

@@ -2735,12 +2735,6 @@
    <trkpt lat="51.35378000000001" lon="4.63424">
     <ele>22.13</ele>
    </trkpt>
-   <trkpt lat="51.353860000000005" lon="4.6341600000000005">
-    <ele>22.13</ele>
-   </trkpt>
-   <trkpt lat="51.35408" lon="4.6336200000000005">
-    <ele>22.13</ele>
-   </trkpt>
-  </trkseg>
+   </trkseg>
  </trk>
 </gpx>
